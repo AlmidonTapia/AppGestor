@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/back_login"
+    >
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ivLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_fileName="login2.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        />
+    <TextView
+        android:id="@+id/tvtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:text="@string/login_name"
+        android:textSize="20sp"
+        android:textColor="#2E77E4"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:layout_below="@id/ivLogo"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/tvtitulo"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <EditText
+                    android:id="@+id/etUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/user_name"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#2E77E4"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:drawablePadding="8dp"
+                    android:background="@drawable/custom_edittext" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/tilUser"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/blue"
+                >
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#2E77E4"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:drawablePadding="8dp"
+                    android:background="@drawable/custom_edittext" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tvForgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tilPassword"
+                android:text="@string/forget_password"
+                android:layout_alignParentEnd="true"
+                android:textColor="#2E77E4"
+                android:layout_marginTop="15dp"
+                >
+            </TextView>
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/blue"
+                android:layout_below="@+id/tvForgetPassword"
+                android:text="@string/login"
+                />
+
+            <Button
+                android:id="@+id/btnweb"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green"
+                android:layout_below="@+id/btnLogin"
+                android:text="@string/web_page"
+                />
+            <TextView
+                android:id="@+id/tvnewuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnweb"
+                android:text="@string/new_user"
+                android:textColor="#2E77E4"
+                android:textSize="16sp"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                />
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- GENERAL -->
+    <string name="app_name">AppGestor</string>
+
+    <!-- SPLASH SCREEN -->
+    <string name="version_app">Version 1.0</string>
+    <string name="nombre_app">Gestor App</string>
+    <string name="by_developer">Developed by: T-almt</string>
+    <string name="logo_description">Logo principal de la aplicación</string>
+    <string name="app_description">AppGestor is a simple application to manage your tasks and projects.</string>
+
+    <!--CONTROLES GENERALES-->
+    <string name="nuevo">Nuevo</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="actualizar">actualizar</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+
+    <!--LOGIN-->
+    <string name="login_title">Login</string>
+    <string name="login_name">Bienvenido a AppGestor</string>
+    <string name="user_name">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="web_page">Pagina web</string>
+    <string name="forget_password">Olvidaste tu contraseña?</string>
+    <string name="new_user">No tienes una cuenta?, registrate</string>
+
+    <!--REGISTRO-->
+    <string name="registro_titulo">Registro Usuario</string>
+    <string name="Registro_ingrese_datos">Ingrese datos</string>
+    <string name="registro_nombre">Nombre</string>
+    <string name="registro_InputNombre">Ingrese Nombre</string>
+    <string name="registro_apellido">Apellido</string>
+    <string name="registro_InputApellido">Ingrese Apellido</string>
+    <string name="registro_correo">Correo Electronico</string>
+    <string name="registro_InputCorreo">Ingrese Correo Electronico</string>
+    <string name="registro_contrasenia">Contraseña</string>
+    <string name="registro_InputContrasenia">Ingrese Contraseña</string>
+    <string name="registro_confirmar_contrasenia">Confirmar Contraseña</string>
+    <string name="registro_InputConfirmarContrasenia">Ingrese Confirmar Contraseña</string>
+    <string name="registro_registerBtn">Registrar</string>
+    <string name="registro_IrLogin">Ir a Login</string>
+
+    <!--DASHBOARD-->
+</resources>

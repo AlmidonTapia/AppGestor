@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "32076901876",
+    "project_id": "gestorapp-ad67c",
+    "storage_bucket": "gestorapp-ad67c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32076901876:android:f18e14733a3a944379dda1",
+        "android_client_info": {
+          "package_name": "com.atapia.appgestor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwe1jyAGIs7Mgb_F6duFUQ0Tlm6thmXII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
