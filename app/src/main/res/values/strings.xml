@@ -45,5 +45,16 @@
     <string name="registro_registerBtn">Registrar</string>
     <string name="registro_IrLogin">Ir a Login</string>
 
+    <!--RESTABLECER CONTRASEÑA-->
+    <string name="restablecer_titulo">Restablecer Contraseña</string>
+    <string name="restablecer_subtitulo">Ingrese su correo electrónico para recuperar su cuenta.</string>
+    <string name="restablecer_tv">Correo Electronico</string>
+    <string name="restablecer_hint">Ingrese su correo electrónico</string>
+    <string name="restablecer_guia">*Se enviarán los pasos para la recuperación al correo ingresado.</string>
+    <string name="restablecer_btn">Restablecer Contraseña</string>
+
+
+
+
     <!--DASHBOARD-->
 </resources>

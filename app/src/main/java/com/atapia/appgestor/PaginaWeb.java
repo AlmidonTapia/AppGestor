@@ -26,7 +26,7 @@ public class PaginaWeb extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
 
-        webView.loadUrl("https://www.linkedin.com/in/tapiaalmidon");
+        webView.loadUrl("https://www.spacex.com/");
         webView.setWebViewClient(new WebViewClient());
 
     }

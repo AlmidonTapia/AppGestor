@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnweb, btnLogin;
-    TextView tvForgetPassword, tvnewuser;
+    private TextView tvForgetPassword, tvnewuser;
     private FirebaseAuth mAuth;
     private EditText etUser, etPassword;
     @Override
@@ -50,30 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = etUser.getText().toString().trim();
-                String password = etPassword.getText().toString().trim();
-
-                if (email.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Por favor, ingrese correo y contraseña", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                mAuth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(MainActivity.this, "Inicio de sesión exitoso.",
-                                            Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(MainActivity.this, Dashboard.class);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    Toast.makeText(MainActivity.this, "Error al iniciar sesión: " + task.getException().getMessage(),
-                                            Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
+                validarDatos();
             }
         });
 
@@ -83,6 +60,43 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Registro.class));
             }
         });
+        tvForgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecuperarContrasenia.class));
+            }
+        });
     }
+    public void validarDatos(){
+        String email = etUser.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
 
+        if (email.isEmpty() || password.isEmpty()) {
+            etUser.requestFocus();
+            etPassword.requestFocus();
+            Toast.makeText(MainActivity.this, "Por favor, ingrese correo y contraseña", Toast.LENGTH_SHORT).show();
+            return;
+        }else{
+            iniciarSesion(email, password);
+        }
+
+    }
+    private void iniciarSesion(String email, String password) {
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Inicio de sesión exitoso.",
+                                    Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, Dashboard.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Error al iniciar sesión: " + task.getException().getMessage(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
 }
