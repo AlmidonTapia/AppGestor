@@ -18,7 +18,6 @@ public class PaginaWeb extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_pagina_web);
 
         webView = findViewById(R.id.webView);
@@ -27,7 +26,7 @@ public class PaginaWeb extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
 
-        webView.loadUrl("https://www.google.com");
+        webView.loadUrl("https://www.linkedin.com/in/tapiaalmidon");
         webView.setWebViewClient(new WebViewClient());
 
     }

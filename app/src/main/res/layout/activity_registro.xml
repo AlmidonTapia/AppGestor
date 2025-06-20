@@ -146,29 +146,30 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-<!--            <TextView-->
-<!--                android:id="@+id/textViewConfirmarContrasenia"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/registro_confirmar_contrasenia"-->
-<!--                android:textSize="16sp"-->
-<!--                android:layout_marginTop="15dp"-->
-<!--                android:textStyle="bold"/>-->
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:id="@+id/textInputLayoutConfirmarContrasenia"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="15dp"-->
-<!--                android:layout_marginBottom="15dp">-->
+            <TextView
+                android:id="@+id/textViewConfirmarContrasenia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registro_confirmar_contrasenia"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
 
-<!--                <EditText-->
-<!--                    android:id="@+id/editTextConfirmarContrasenia"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="@string/registro_confirmar_contrasenia"-->
-<!--                    android:inputType="textPassword"/>-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutConfirmarContrasenia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:passwordToggleEnabled="true">
 
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
+                <EditText
+                    android:id="@+id/editTextConfirmarContrasenia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/registro_confirmar_contrasenia"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
