@@ -35,7 +35,6 @@ public class PaginaWeb extends AppCompatActivity {
     public void onBackPressed() {
         if (webView.canGoBack()) {
             webView.goBack();
-               ;
         }
         super.onBackPressed();
     }

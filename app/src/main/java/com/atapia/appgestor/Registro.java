@@ -8,15 +8,11 @@ import android.text.TextUtils;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -129,7 +125,6 @@ public class Registro extends AppCompatActivity {
 
     private void GuardarInformacionUsuario() {
         progressDialog.setMessage("Guardando información del usuario...");
-        progressDialog.dismiss();
 
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         String uid = firebaseUser.getUid();
